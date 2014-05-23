@@ -1,24 +1,35 @@
-from TurtleWorld import * 		
-world = TurtleWorld()			
-bob = Turtle()				
+from TurtleWorld import * 					
 
 def koch(t,x):
-	bob=t	
-	pd(t)
-	fd(t,x/3)
+	print x
+	if x < 3:
+		fd(t,x)	
+		return
+	pd
+	
+	koch(t,x/3)
 	lt(t, 60)
-	fd(t,x/3)
+	koch(t,x/3)
 	rt(t,120)
-	fd(t,x/3)
+	koch(t,x/3)
 	lt(t,60)
-	fd(t,x/3)
+	koch(t,x/3)
+	
 
-	koch(t,x/3-1)
+
+if __name__=='__main__':
+	world = TurtleWorld()			
+	bob = Turtle()	
+	bob.delay=.01
+	koch(bob, 450)
+	wait_for_user()
 
 
-bob.delay=.05
 
-koch(bob, 250)
+
+
+
+
 
 
 

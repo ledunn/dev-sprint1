@@ -2,27 +2,45 @@ from TurtleWorld import *
 world = TurtleWorld()			
 bob = Turtle()				
 
-def koch(t,x):
-	if t<3:
-		return
-	bob=t	
-	pd(t)
-	fd(t,x/3)
-	lt(t, 60)
-	fd(t,x/3)
-	rt(t,120)
-	fd(t,x/3)
-	lt(t,60)
-	fd(t,x/3)
-	lt(t, 60)
-	koch(t,x-1)
+from koch_curve import koch
 
-bob.delay=.05
+t=bob
+x=45
+bob.delay=.01
 
-koch(bob,360)
+koch(t,x)
+rt(t,120)
 
-def snowflake(t,x):
-	for i in range(3):
-		koch(t,x)	
+koch(t,x)
+rt(t, 120)
 
-snowflake(bob, 12)
+koch(t,x)
+rt(t,120)
+
+koch(t,450)
+
+# def koch(t,x):
+# 	if x<3:
+		
+# 		return
+		
+# 	pd(t)
+# 	fd(t,x/3)
+# 	lt(t, 60)
+# 	fd(t,x/3)
+# 	rt(t,120)
+# 	fd(t,x/3)
+# 	lt(t,60)
+# 	fd(t,x/3)
+# 	lt(t, 60)
+# 	koch(t,x-1)
+
+# bob.delay=.05
+
+# koch(bob,360)
+
+# def snowflake(t,x):
+# 	for i in range(3):
+# 		koch(t,x)	
+
+# snowflake(bob, 12)
