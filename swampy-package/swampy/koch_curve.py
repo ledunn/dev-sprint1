@@ -1,7 +1,6 @@
 from TurtleWorld import * 					
 
 def koch(t,x):
-	print x
 	if x < 3:
 		fd(t,x)	
 		return
@@ -21,7 +20,7 @@ if __name__=='__main__':
 	world = TurtleWorld()			
 	bob = Turtle()	
 	bob.delay=.01
-	koch(bob, 450)
+	koch(bob, 4500)
 	wait_for_user()
 
 

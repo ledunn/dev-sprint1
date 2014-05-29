@@ -5,7 +5,7 @@ bob = Turtle()
 from koch_curve import koch
 
 t=bob
-x=45
+x=360
 bob.delay=.01
 
 koch(t,x)
@@ -17,7 +17,6 @@ rt(t, 120)
 koch(t,x)
 rt(t,120)
 
-koch(t,450)
 
 # def koch(t,x):
 # 	if x<3:

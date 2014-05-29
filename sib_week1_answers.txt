@@ -1,3 +1,16 @@
 *** Cut and paste the for loop here ***
+ {% for message in messages %}
+{{message}}
+{% endfor %}
+</pre>
+{% endif %}
+{% endwith %}
+</center>
+</body>
+</html>
 
 *** What is the for loop doing? ***
+
+First answer: The for loop is keeping the messages/results generated centered in the body of the text?
+Second answer: Does it tell the app to cycle through the possible messages before it locates the correct one?
+
